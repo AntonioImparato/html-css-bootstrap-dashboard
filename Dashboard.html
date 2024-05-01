@@ -47,9 +47,52 @@
         <!--/nav bar-->
     </header>
     <main>
+        <!--corpo pagina-->
+        <!--container-->
         <div class="container">
-            <h1>Nuovo libro</h1>
+
+            <h1 class="fs-1 mb-4">Nuovo libro</h1>
+            <!--from-->
+            <form class="row g-3">
+                <!--dati autore-->
+                <div class="d-flex ">
+                    <div class="mb-3 col-6 me-2">
+                        <label for="nome-autore" class="form-label fs-5 fw-medium">Nome autore </label>
+                        <input type="text" class="form-control" id="nome-autore"
+                            placeholder="inserisici il nome dell'autore">
+                    </div>
+                    <div class="mb-3 col-6 ">
+                        <label for="cognome-autore" class="form-label fs-5 fw-medium">Cognome autore</label>
+                        <input type="text" class="form-control" id="cognome-autore" placeholder="inserisci il Cognome">
+                    </div>
+                </div>
+                <div class="mb-3 ">
+                    <label for="titolo-libro" class="form-label fs-5 fw-medium">Titolo</label>
+                    <input type="text" class="form-control" id="titolo-libro"
+                        aria-describedby="Inserisci il titolo del libro">
+                    <div id="emailHelp" class="form-text">titolo versione italiana</div>
+                </div>
+                <!--/dati autore-->
+                <!--select genere del libro-->
+                <div class="mb-3">
+                    <label for="Genere" class="form-label fs-5 fw-medium">Genere</label>
+                    <select class="form-select" aria-label="genere">
+                        <option selected>Segli il genere</option>
+                        <option value="1">Romanzi</option>
+                        <option value="2">Fantasy</option>
+                        <option value="3">gialli/thriller</option>
+                        <option value="4">Biografie</option>
+                        <option value="5">Storia</option>
+                        <option value="6">fantascienza </option>
+                    </select>
+                </div>
+                <!--/select genere del libro-->
+
+            </form>
+            <!--/from-->
         </div>
+        <!--/container-->
+        <!--/corpo pagina-->
     </main>
 
 </body>
