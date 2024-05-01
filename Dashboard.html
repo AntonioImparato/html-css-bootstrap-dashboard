@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Catalogo Libri</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Anagrafica utenti</a>
@@ -53,41 +53,73 @@
 
             <h1 class="fs-1 mb-4">Nuovo libro</h1>
             <!--from-->
-            <form class="row g-3">
+            <form method="get">
                 <!--dati autore-->
-                <div class="d-flex ">
-                    <div class="mb-3 col-6 me-2">
-                        <label for="nome-autore" class="form-label fs-5 fw-medium">Nome autore </label>
-                        <input type="text" class="form-control" id="nome-autore"
-                            placeholder="inserisici il nome dell'autore">
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="titolo-libro" class="form-label fs-5 fw-medium">Nome autore</label>
+                        <input type="text" class="form-control" placeholder="Nome dell'autore" aria-label="First name"
+                            required>
                     </div>
-                    <div class="mb-3 col-6 ">
-                        <label for="cognome-autore" class="form-label fs-5 fw-medium">Cognome autore</label>
-                        <input type="text" class="form-control" id="cognome-autore" placeholder="inserisci il Cognome">
+                    <div class="col-6">
+                        <label for="titolo-libro" class="form-label fs-5 fw-medium">Cognome autore</label>
+                        <input type="text" class="form-control" placeholder="cognome autore" aria-label="cognome-autore"
+                            required>
                     </div>
                 </div>
                 <div class="mb-3 ">
                     <label for="titolo-libro" class="form-label fs-5 fw-medium">Titolo</label>
                     <input type="text" class="form-control" id="titolo-libro"
-                        aria-describedby="Inserisci il titolo del libro">
+                        aria-describedby="Inserisci il titolo del libro" required>
                     <div id="emailHelp" class="form-text">titolo versione italiana</div>
                 </div>
                 <!--/dati autore-->
                 <!--select genere del libro-->
-                <div class="mb-3">
-                    <label for="Genere" class="form-label fs-5 fw-medium">Genere</label>
-                    <select class="form-select" aria-label="genere">
-                        <option selected>Segli il genere</option>
-                        <option value="1">Romanzi</option>
-                        <option value="2">Fantasy</option>
-                        <option value="3">gialli/thriller</option>
-                        <option value="4">Biografie</option>
-                        <option value="5">Storia</option>
-                        <option value="6">fantascienza </option>
-                    </select>
-                </div>
-                <!--/select genere del libro-->
+                <div class="row mb-3">
+                    <div class="mb-3 col-lg-4">
+                        <label for="Genere" class="form-label fs-5 fw-medium">Genere</label>
+                        <select class="form-select" aria-label="genere">
+                            <option selected>Segli il genere</option>
+                            <option value="1">Romanzi</option>
+                            <option value="2">Fantasy</option>
+                            <option value="3">gialli/thriller</option>
+                            <option value="4">Biografie</option>
+                            <option value="5">Storia</option>
+                            <option value="6">fantascienza </option>
+                        </select>
+                    </div>
+                    <!--/select genere del libro-->
+                    <!--descrizioni libro-->
+                    <div class="col-lg-4">
+                        <label for="anno-libro" class="form-label fs-5 fw-medium">anno di pubblicazione</label>
+                        <input type="date" class="form-control" placeholder="inserisci l'anno" aria-label="anno-libro"
+                            required>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="ISBN" class="form-label fs-5 fw-medium">ISBN#</label>
+                        <input type="text" class="form-control" placeholder="Inserisci il codice ISMN#"
+                            aria-label="ISBN" required>
+                    </div>
 
+                </div>
+                <hr>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Inserisci eventuali note sul libro"></textarea>
+                </div>
+                <!--/descrizioni libro-->
+                <!--check-->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Disponibile anche in digitale
+                    </label>
+                </div>
+                <!--/check-->
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">aggiungi libro</button>
+                </div>
             </form>
             <!--/from-->
         </div>
